@@ -44,6 +44,7 @@ public class MediaFile {
     public static final int FILE_TYPE_WEBMA   = 14;
     public static final int FILE_TYPE_PCM     = 15;
     public static final int FILE_TYPE_EC3     = 16;
+    public static final int FILE_TYPE_APE   = 306;
     private static final int FIRST_AUDIO_FILE_TYPE = FILE_TYPE_MP3;
     private static final int LAST_AUDIO_FILE_TYPE = FILE_TYPE_EC3;
 
@@ -200,6 +201,8 @@ public class MediaFile {
         addFileType("AAC", FILE_TYPE_AAC, "audio/aac", MtpConstants.FORMAT_AAC);
         addFileType("AAC", FILE_TYPE_AAC, "audio/aac-adts", MtpConstants.FORMAT_AAC);
         addFileType("MKA", FILE_TYPE_MKA, "audio/x-matroska");
+        addFileType("AC3", FILE_TYPE_AC3, "audio/ac3");
+        addFileType("APE", FILE_TYPE_APE, "audio/x-ape");
 
         addFileType("MID", FILE_TYPE_MID, "audio/midi");
         addFileType("MIDI", FILE_TYPE_MID, "audio/midi");
@@ -216,6 +219,7 @@ public class MediaFile {
         addFileType("MP4", FILE_TYPE_MP4, "video/mp4", MtpConstants.FORMAT_MPEG);
         addFileType("MPEG4", FILE_TYPE_MP4, "video/mpeg4", MtpConstants.FORMAT_MPEG);
         addFileType("M4V", FILE_TYPE_M4V, "video/m4v", MtpConstants.FORMAT_MPEG);
+        addFileType("MOV", FILE_TYPE_MP4, "video/quicktime", MtpConstants.FORMAT_MPEG);
         addFileType("3GP", FILE_TYPE_3GPP, "video/3gpp",  MtpConstants.FORMAT_3GP_CONTAINER);
         addFileType("3GPP", FILE_TYPE_3GPP, "video/3gpp", MtpConstants.FORMAT_3GP_CONTAINER);
         addFileType("3G2", FILE_TYPE_3GPP2, "video/3gpp2", MtpConstants.FORMAT_3GP_CONTAINER);
@@ -263,6 +267,7 @@ public class MediaFile {
         addFileType("ZIP", FILE_TYPE_ZIP, "application/zip");
         addFileType("MPG", FILE_TYPE_MP2PS, "video/mp2p");
         addFileType("MPEG", FILE_TYPE_MP2PS, "video/mp2p");
+        addFileType("EC3", FILE_TYPE_EC3, "audio/eac3");
     }
 
     public static boolean isAudioFileType(int fileType) {
